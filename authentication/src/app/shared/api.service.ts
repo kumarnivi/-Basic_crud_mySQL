@@ -16,7 +16,8 @@ export class ApiService {
 
 
   post( url:string, formData: any): Observable<any> {
-    return this.http.post(this.apiUrl + url, formData);
+    const headers = { 'content-type': 'application/json' };
+    return this.http.post(this.apiUrl + url, formData , { headers: headers });
   }
 
 

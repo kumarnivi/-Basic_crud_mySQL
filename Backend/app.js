@@ -10,15 +10,16 @@ const app = express();
 // Use only express.json() for parsing JSON
 app.use(express.json());
 
-const allowedOrigins = ['http://localhost:8080'];
-app.use(cors({
-  origin: allowedOrigins
-}));
+
+// const allowedOrigins = ['http://localhost:8080'];
+// app.use(cors({
+//   origin: allowedOrigins
+// }));
 
 
 
+app.use(cors());
 
-// app.use(cors());
 app.use('/api',  router)
 
 // connet the server which using port

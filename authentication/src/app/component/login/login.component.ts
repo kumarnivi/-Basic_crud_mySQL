@@ -46,7 +46,7 @@ const FormData = {
 }
 
 if(this.loginForm.valid){
-  this.api.post('api/login', FormData).subscribe(
+  this.api.post('/api/login', FormData).subscribe(
     (response: any) => {
       console.log('Leave request submitted successfully');
     },
